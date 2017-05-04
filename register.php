@@ -29,11 +29,15 @@
 		function checkPss(){
 			if(document.getElementById('psw').value != "" && document.getElementById('cpsw').value != "")
 			if(document.getElementById('psw').value == document.getElementById('cpsw').value){
-				 document.getElementById("cpsw").style.backgroundColor = "green";
+        document.getElementById("cpsw").style.backgroundColor = "rgba(0,130,46,0.2)";
+        document.getElementById("cpsw").style.borderColor = "rgb(0,130,46)";
+        document.getElementById("cpsw").style.borderWidth = "0.30em";
 				 $('#subButton').prop('disabled', false);
 			 }
 			else{
-				 document.getElementById("cpsw").style.backgroundColor = "red";
+        document.getElementById("cpsw").style.backgroundColor = "rgba(255,0,0,0.5)";
+        document.getElementById("cpsw").style.borderColor = "rgb(255,0,0)";
+        document.getElementById("cpsw").style.borderWidth = "0.30em";
 				 $('button').prop('disabled', true);
 			 }
 		 }

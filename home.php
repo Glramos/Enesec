@@ -32,6 +32,11 @@ unset($_POST['']);
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 		<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf8" src="/enesec/sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="/enesec/sweetalert-master/dist/sweetalert.css">
+
+
+		</script>
 
   </head>
 
@@ -110,9 +115,28 @@ unset($_POST['']);
 	<script type="text/javascript">
 
 	function rmv(id) {
-		if (confirm('Do you realy want to remove this user?')){
-			window.location.href="taction_remove?id=" + id;
-		}
+		// if (confirm('Do you realy want to remove this user?')){
+		// 	window.location.href="taction_remove?id=" + id;
+		// }
+
+		swal({
+		  title: "Do you realy want to remove this user??",
+		  text: "You will not be able to recover it!",
+		  type: "warning",
+		  showCancelButton: true,
+		  confirmButtonColor: "green",
+		  confirmButtonText: "Yes",
+		  cancelButtonText: "No",
+		  closeOnConfirm: true,
+		  closeOnCancel: true,
+			html: false,
+			showLoaderOnConfirm: true
+		},
+		function(isConfirm){
+		  if (isConfirm) {
+		    window.location.href="taction_remove?id=" + id;
+		  }
+		});
 
 	}
 
