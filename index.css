@@ -1,0 +1,201 @@
+.top {
+  margin: 0 auto;
+}
+
+#logo{
+  width: 1000px;
+  height: 100px;
+  float: left;
+
+}
+
+.menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+
+  background-color: white;
+}
+
+.menu a {
+  height: 50px;
+
+  font-size: 1.6em;
+
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+
+  margin: 0 auto;
+
+  margin-top: 0.125em;
+}
+
+.menu a:first-child{
+  margin-right: 1.6em;
+}
+
+.menu a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.middle {
+  margin-top: 50px;
+  height: 35em;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 1em;
+
+    height: 15em;
+    width: 50em;
+
+    margin: 0 auto;
+
+    margin-top: 100px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+    border-radius: 0.5em;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    border-radius: 0.5em;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.signin {
+    width: auto;
+    padding: 10px 18px;
+    background-color: blue;
+
+    border-radius: 0.5em;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+span a {
+  text-decoration: none;
+  color: black;
+}
+
+span a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* Center the image and position the close button */
+.closebuttom {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 117%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+#footer {
+  float: right;
+  margin-right: 1.6em;
+}

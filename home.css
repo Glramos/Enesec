@@ -1,0 +1,77 @@
+.top {
+  margin: 0 auto;
+}
+
+#logo{
+  font-size: 1.6em;
+  float: left;
+
+  margin-left: 1.6em;
+
+}
+
+.menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.5em;
+
+  background-color: white;
+}
+
+.menu a {
+  height: 50px;
+
+  font-size: 1.6em;
+
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+
+  margin: 0 auto;
+
+  margin-top: 0.125em;
+}
+
+.menu a:first-child{
+  margin-right: 1.6em;
+}
+
+.menu a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.middle {
+  margin-top: 4em;
+  height: 37em;
+}
+
+#myTable a{
+  text-decoration: none;
+  color: green;
+
+}
+
+#myTable a:hover {
+  text-decoration: underline;
+
+}
+
+#myTable td:last-child {
+  text-align: center;
+}
+
+#welcome {
+  margin-top: 10em;
+  text-align: center;
+}
+
+#footer {
+  float: right;
+  margin-right: 1.6em;
+}

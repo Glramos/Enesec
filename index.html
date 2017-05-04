@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>EneSec</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script type="text/javascript">
+  		function checkPss(){
+  			if(document.getElementById('psw').value == document.getElementById('cpsw').value)
+  				 document.getElementById("cpsw").style.backgroundColor = "green";
+  			else
+  				 document.getElementById("cpsw").style.backgroundColor = "red";
+  		}
+    </script>
+  </head>
+
+  <body>
+
+    <div class="top">
+      <div class="menu">
+        <a href="index.html">Login</a>
+        <img id="logo" src="C:\wamp64\www\enesec\logo.jpeg" alt="Logo">
+      </div>
+    </div>
+
+    <div class="middle">
+      <form class="" action="action_login.php" method="post">
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="bottom">
+
+    </div>
+
+  </body>
+
+  <footer>
+    <h1 id="footer" >Made by Gabriel Ramos and João Tribouillet</h1>
+  </footer>
+</html>
