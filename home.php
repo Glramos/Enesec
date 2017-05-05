@@ -1,9 +1,9 @@
 <?php
-	include('action_session.php');
+	include('actions/action_session.php');
 	if(!$_SESSION['adm'])
 		 header("Location: home.php");
 
-	include("action_connect.php");
+	include("actions/action_connect.php");
 
   if (mysqli_connect_errno()) {
     die("Failed to connect to MySQL: " . mysqli_connect_error());
@@ -27,7 +27,7 @@ unset($_POST['']);
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>EneSec</title>
 
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
@@ -44,7 +44,7 @@ unset($_POST['']);
 
     <div class="top">
       <div class="menu">
-        <a href="action_logout.php">Log Out</a>
+        <a href="actions/action_logout.php">Log Out</a>
         <a href="register.php">Register</a>
         <a href="home.php">Home</a>
         <h1 id='logo'>EneSec</h1>
@@ -134,7 +134,7 @@ unset($_POST['']);
 		},
 		function(isConfirm){
 		  if (isConfirm) {
-		    window.location.href="taction_remove?id=" + id;
+		    window.location.href="actions/taction_remove?id=" + id;
 		  }
 		});
 

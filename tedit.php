@@ -1,9 +1,9 @@
 <?php
-  include('action_session.php');
+  include('actions/action_session.php');
   if(!$_SESSION['adm'])
-     header("Location: home.php");
+     header("Location: ../home.php");
 
-  include("action_connect.php");
+  include("actions/action_connect.php");
 
   $id = mysqli_real_escape_string($con, $_GET['id']);
 
@@ -21,15 +21,15 @@
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
      <title>EneSec</title>
 
-     <link rel="stylesheet" href="edit.css">
+     <link rel="stylesheet" href="css/edit.css">
      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-     <script type="text/javascript" src="jquery.js" ></script>
-     <script src="jquery.maskMoney.js" type="text/javascript"></script>
- 		<script src="jquery.js" type="text/javascript"></script>
- 		<script src="inputmask.js" type="text/javascript"></script>
+     <script type="text/javascript" src="js/jquery.js" ></script>
+     <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
+ 		<script src="js/jquery.js" type="text/javascript"></script>
+ 		<script src="js/inputmask.js" type="text/javascript"></script>
  		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-   	<script src="jquery.maskMoney.js" type="text/javascript"></script>
- 		<script src="jquery.maskedinput.js" type="text/javascript"></script>
+   	<script src="js/jquery.maskMoney.js" type="text/javascript"></script>
+ 		<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
  	  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
  	  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
@@ -51,7 +51,7 @@
 
      <div class="top">
        <div class="menu">
-         <a href="action_logout.php">Log Out</a>
+         <a href="actions/action_logout.php">Log Out</a>
          <a href="register.php">Register</a>
          <a href="home.php">Home</a>
          <h1 id='logo'>EneSec</h1>
@@ -59,7 +59,7 @@
      </div>
 
      <div class="middle">
-       <form class="" action="action_edit.php" method="post">
+       <form class="" action="actions/action_edit.php" method="post">
          <div class="container">
 
            <label><b>Name</b></label>

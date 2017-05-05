@@ -111,14 +111,14 @@ if(is_new() && is_true_cpf($cpf)){
 mysqli_close($con);
 
 if($notification == "error"){
-    echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = 'register.php';</script>";
+    echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = '../register.php';</script>";
 }elseif($notification == "email"){
-  echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = 'register.php';</script>";
+  echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = '../register.php';</script>";
 }elseif ($notification == "cpf") {
   echo "<script>alert('CPF is not valid'); location.href = 'register.php';</script>";
 }
 else {
-    echo "<script>alert('Registration made with success!'); location.href = 'register.php';</script>";
+    echo "<script>alert('Registration made with success!'); location.href = '../register.php';</script>";
 }
 
 ?>

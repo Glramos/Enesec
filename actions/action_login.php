@@ -31,16 +31,16 @@
 
         if ($_SESSION[adm] == 1) {
           echo "user valid";
-          header("location: home.php");
+          header("location: ../home.php");
         }else {
           echo "user valid";
-          header("location: welcome.php");
+          header("location: ../welcome.php");
         }
 
 		  }else {
 			 $error = "Your Login Name or Password is invalid";
 			 echo $error;
-			 header("location: index.html");
+			 header("location: ../index.html");
 		  }
 
 		mysqli_close($con);

@@ -1,5 +1,5 @@
 <?php
-   include('action_session.php');
+   include('actions/action_session.php');
    if($_SESSION['adm'])
       header("Location: home.php");
 ?>
@@ -10,14 +10,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>EneSec</title>
 
-    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="css/welcome.css">
   </head>
 
   <body>
 
     <div class="top">
       <div class="menu">
-        <a href="action_logout.php">Log Out</a>
+        <a href="actions/action_logout.php">Log Out</a>
         <a href="welcome.php">Home</a>
         <h1 id='logo'>EneSec</h1>
       </div>
