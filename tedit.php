@@ -1,5 +1,6 @@
 <?php
   include('actions/action_session.php');
+
   if(!$_SESSION['adm'])
      header("Location: ../home.php");
 
@@ -24,14 +25,18 @@
      <link rel="stylesheet" href="css/edit.css">
      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
      <script type="text/javascript" src="js/jquery.js" ></script>
-     <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
  		<script src="js/jquery.js" type="text/javascript"></script>
  		<script src="js/inputmask.js" type="text/javascript"></script>
  		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
    	<script src="js/jquery.maskMoney.js" type="text/javascript"></script>
  		<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
- 	  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
  	  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="/enesec/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/enesec/sweetalert-master/dist/sweetalert.css">
+
 
     <script type="text/javascript">
    $(document).ready(function(){
@@ -100,3 +105,11 @@
 
 
  </html>
+
+ <?php
+   if (isset($_GET['notification'])) {
+     global $notification;
+     $notification = $_GET['notification'];
+     include('actions/action_notification.php');
+   }
+ ?>

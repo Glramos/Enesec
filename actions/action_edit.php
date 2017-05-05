@@ -2,7 +2,7 @@
   include("action_session.php");
   include("action_connect.php");
 
-  $notification="";
+  $notification="edit";
 
   $name = mysqli_real_escape_string($con, $_POST['name']);
   $lname = mysqli_real_escape_string($con, $_POST['lname']);
@@ -23,7 +23,6 @@
     $count = mysqli_num_rows($result);
 
     if($count == 1) {
-      echo "This email is already used!";
       global $notification;
       $notification = "email";
 
@@ -105,13 +104,25 @@
   }
 
   if($notification == "error"){
-      echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = '../home.php';</script>";
+      echo "
+      <script>
+        location.href = '../tedit?id=$_SESSION[opt]&notification=$notification';
+      </script>";
   }elseif($notification == "email"){
-    echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = '../home.php';</script>";
+    echo "
+    <script>
+      location.href = '../tedit?id=$_SESSION[opt]&notification=$notification';
+    </script>";
   }elseif ($notification == "cpf") {
-    echo "<script>alert('CPF is not valid'); location.href = '../home.php';</script>";
+    echo "
+    <script>
+      location.href = '../tedit?id=$_SESSION[opt]&notification=$notification';
+    </script>";
   }else {
-      echo "<script>alert('Changes made with success!'); location.href = '../home.php';</script>";
+    echo "
+    <script>
+      location.href = '../home?id=$_SESSION[opt]&notification=$notification';
+    </script>";
   }
 
 	mysqli_close($con);

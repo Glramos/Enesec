@@ -25,6 +25,9 @@
 	  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 	  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
+    <script type="text/javascript" charset="utf8" src="/enesec/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/enesec/sweetalert-master/dist/sweetalert.css">
+
     <script type="text/javascript">
 		function checkPss(){
 			if(document.getElementById('psw').value != "" && document.getElementById('cpsw').value != "")
@@ -64,7 +67,7 @@
     </div>
 
     <div class="middle">
-      <form class="" action="actions/action_signin.php" method="post">
+      <form class="" action="actions/action_register.php" method="post">
         <div class="container">
 
           <label><b>Name</b></label>
@@ -113,3 +116,11 @@
 
 
 </html>
+
+<?php
+  if (isset($_GET['notification'])) {
+    global $notification;
+    $notification = $_GET['notification'];
+    include('actions/action_notification.php');
+  }
+?>

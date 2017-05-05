@@ -1,7 +1,10 @@
 <?php
 	include('actions/action_session.php');
+
 	if(!$_SESSION['adm'])
 		 header("Location: home.php");
+
+	include('actions/action_notification.php');
 
 	include("actions/action_connect.php");
 
@@ -18,7 +21,6 @@ if (!$result) {
 
 $count = mysqli_num_rows($result);
 
-unset($_POST['']);
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +36,6 @@ unset($_POST['']);
 		<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf8" src="/enesec/sweetalert-master/dist/sweetalert.min.js"></script>
 		<link rel="stylesheet" href="/enesec/sweetalert-master/dist/sweetalert.css">
-
-
 		</script>
 
   </head>
@@ -142,3 +142,12 @@ unset($_POST['']);
 
 	</script>
 </html>
+
+<?php
+	if (isset($_GET['notification'])){
+		global $notification;
+		$notification = $_GET['notification'];
+		include('actions/action_notification.php');
+	}
+
+?>

@@ -2,7 +2,7 @@
 include 'action_connect.php';
 //include 'md5.js';
 
-$notification = "";
+$notification = "register";
 
 $name = mysqli_real_escape_string($con, $_POST['name']);
 $lname = mysqli_real_escape_string($con, $_POST['lname']);
@@ -24,7 +24,6 @@ function is_new(){
   $count = mysqli_num_rows($result);
 
   if($count == 1) {
-    echo "This email is already used!";
     global $notification;
     $notification = "email";
 
@@ -101,7 +100,7 @@ if(is_new() && is_true_cpf($cpf)){
   VALUES ('$name', '$lname', '$cpf', '$email', '$psw', '$role', '$birthdate', '$wage')";
 
   if ($con->query($sql) === TRUE) {
-      echo "New record created successfully";
+
   } else {
       echo "Error: " . $sql . "<br>" . $con->error;
       $notification = "error";
@@ -111,14 +110,25 @@ if(is_new() && is_true_cpf($cpf)){
 mysqli_close($con);
 
 if($notification == "error"){
-    echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = '../register.php';</script>";
+    echo "
+    <script>
+      location.href = '../register?notification=$notification';
+    </script>";
 }elseif($notification == "email"){
-  echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = '../register.php';</script>";
+  echo "
+  <script>
+    location.href = '../register?notification=$notification';
+  </script>";
 }elseif ($notification == "cpf") {
-  echo "<script>alert('CPF is not valid'); location.href = 'register.php';</script>";
-}
-else {
-    echo "<script>alert('Registration made with success!'); location.href = '../register.php';</script>";
+  echo "
+  <script>
+    location.href = '../register?notification=$notification';
+  </script>";
+}else {
+  echo "
+  <script>
+    location.href = '../home?notification=$notification';
+  </script>";
 }
 
 ?>
