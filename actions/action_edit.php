@@ -105,13 +105,13 @@
   }
 
   if($notification == "error"){
-      echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = 'home.php';</script>";
+      echo "<script>alert('There was not possible to process your data! Try Again!'); location.href = '../home.php';</script>";
   }elseif($notification == "email"){
-    echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = 'home.php';</script>";
+    echo "<script>alert('There is already a user with this email! Enter another email!'); location.href = '../home.php';</script>";
   }elseif ($notification == "cpf") {
-    echo "<script>alert('CPF is not valid'); location.href = 'home.php';</script>";
+    echo "<script>alert('CPF is not valid'); location.href = '../home.php';</script>";
   }else {
-      echo "<script>alert('Changes made with success!'); location.href = 'home.php';</script>";
+      echo "<script>alert('Changes made with success!'); location.href = '../home.php';</script>";
   }
 
 	mysqli_close($con);

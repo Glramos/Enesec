@@ -21,13 +21,13 @@
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
      <title>EneSec</title>
 
-     <link rel="stylesheet" href="edit.css">
+     <link rel="stylesheet" href="/css/edit.css">
      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
      <script type="text/javascript" src="jquery.js" ></script>
-     <script src="jquery.maskMoney.js" type="text/javascript"></script>
- 		 <script src="inputmask.js" type="text/javascript"></script>
-   	 <script src="jquery.maskMoney.js" type="text/javascript"></script>
- 		 <script src="jquery.maskedinput.js" type="text/javascript"></script>
+     <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
+ 		 <script src="js/inputmask.js" type="text/javascript"></script>
+   	 <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
+ 		 <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
 
     <script type="text/javascript">
    $(document).ready(function(){
