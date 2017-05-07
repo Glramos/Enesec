@@ -11,6 +11,7 @@
 }
 
 .menu {
+  z-index:999;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -45,6 +46,7 @@
   color: green;
   text-decoration: underline;
 }
+
 
 .middle {
   margin-top: 4em;

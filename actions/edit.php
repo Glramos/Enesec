@@ -1,6 +1,6 @@
 <?php
-  include("action_session.php");
-  include("action_connect.php");
+  include("session.php");
+  include("connect.php");
 
   $notification="";
 
@@ -14,7 +14,7 @@
 
 
   function is_new(){
-    include 'action_connect.php';
+    include 'connect.php';
 
     $email = mysqli_real_escape_string($con, $_POST['email']);
 
