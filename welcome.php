@@ -1,5 +1,5 @@
 <?php
-   include('actions/action_session.php');
+   include('actions/session.php');
    if($_SESSION['adm'])
       header("Location: home.php");
 ?>
@@ -17,7 +17,7 @@
 
     <div class="top">
       <div class="menu">
-        <a href="actions/action_logout.php">Log Out</a>
+        <a href="actions/logout.php">Log Out</a>
         <a href="welcome.php">Home</a>
         <h1 id='logo'>EneSec</h1>
       </div>

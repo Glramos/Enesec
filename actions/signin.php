@@ -1,5 +1,5 @@
 <?php
-include 'action_connect.php';
+include 'connect.php';
 //include 'md5.js';
 
 $notification = "";
@@ -15,7 +15,7 @@ $birthdate = mysqli_real_escape_string($con, $_POST['birthdate']);
 $wage = mysqli_real_escape_string($con, $_POST['wage']);
 
 function is_new(){
-  include 'action_connect.php';
+  include 'connect.php';
 
   $email = mysqli_real_escape_string($con, $_POST['email']);
 

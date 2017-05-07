@@ -1,9 +1,9 @@
 <?php
-	include('actions/action_session.php');
+	include('actions/session.php');
 	if(!$_SESSION['adm'])
 		 header("Location: home.php");
 
-	include("actions/action_connect.php");
+	include("actions/connect.php");
 
   if (mysqli_connect_errno()) {
     die("Failed to connect to MySQL: " . mysqli_connect_error());
@@ -44,7 +44,7 @@ unset($_POST['']);
 
     <div class="top">
       <div class="menu">
-        <a href="actions/action_logout.php">Log Out</a>
+        <a href="actions/logout.php">Log Out</a>
         <a href="register.php">Register</a>
         <a href="home.php">Home</a>
         <h1 id='logo'>EneSec</h1>
@@ -116,7 +116,7 @@ unset($_POST['']);
 
 	function rmv(id) {
 		// if (confirm('Do you realy want to remove this user?')){
-		// 	window.location.href="taction_remove?id=" + id;
+		// 	window.location.href="tremove?id=" + id;
 		// }
 
 		swal({
@@ -134,7 +134,7 @@ unset($_POST['']);
 		},
 		function(isConfirm){
 		  if (isConfirm) {
-		    window.location.href="actions/taction_remove?id=" + id;
+		    window.location.href="actions/remove?id=" + id;
 		  }
 		});
 
