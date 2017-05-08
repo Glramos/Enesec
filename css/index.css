@@ -3,11 +3,19 @@
 }
 
 #logo{
+  font-size: 1.6em;
+  float: left;
+
+  margin-left: 1.6em;
+
+}
+
+/*#logo{
   width: 1000px;
   height: 100px;
   float: left;
 
-}
+}*/
 
 .menu {
   overflow: hidden;
