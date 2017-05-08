@@ -36,6 +36,15 @@ unset($_POST['']);
 		<link rel="stylesheet" href="/enesec/sweetalert-master/dist/sweetalert.css">
 
 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 		</script>
 
   </head>
@@ -81,8 +90,8 @@ unset($_POST['']);
 						"<td>" . $row["role"]. "</td>".
 						"<td>" . $row["birthdate"]. "</td>".
 						"<td>" . $row["wage"]. "</td>".
-					 	"<td><a title='Edit' href='tedit?id=" . $row["id"] . "'>Edit</a></td>".
-						"<td><a title='Remove' onclick='rmv(" . $row["id"] . ")'>Remove</a></td>";
+					 	"<td><a title='Edit' href='tedit?id=" . $row["id"] . "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td>".
+						"<td><a title='Remove' href='javascript:void(0)' onclick='rmv(" . $row["id"] . ")'><span class='glyphicon glyphicon-remove-sign' aria-hidden='true'></span></a></td>";
     				echo "</tr>";
     			}
     		} else {
