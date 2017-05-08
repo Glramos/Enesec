@@ -62,7 +62,8 @@ unset($_POST['']);
 						<th>Role</th>
 						<th>Birthdate</th>
 						<th>Wage</th>
-						<th>Edit/ Remove</th>
+						<th>Edit</th>
+						<th>Remove</th>
     			</thead>
     			<tbody>
 
@@ -80,8 +81,8 @@ unset($_POST['']);
 						"<td>" . $row["role"]. "</td>".
 						"<td>" . $row["birthdate"]. "</td>".
 						"<td>" . $row["wage"]. "</td>".
-					 	"<td><a title='Edit' href='tedit?id=" . $row["id"] . "'>Edit</a>" . "  ".
-						"<a title='Remove' onclick='rmv(" . $row["id"] . ")'>Remove</a></td>";
+					 	"<td><a title='Edit' href='tedit?id=" . $row["id"] . "'>Edit</a></td>".
+						"<td><a title='Remove' onclick='rmv(" . $row["id"] . ")'>Remove</a></td>";
     				echo "</tr>";
     			}
     		} else {

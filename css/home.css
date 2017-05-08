@@ -64,7 +64,7 @@
 
 }
 
-#myTable td:last-child {
+#myTable td:nth-last-child(-n+2) {
   text-align: center;
 }
 
